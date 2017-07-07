@@ -6,9 +6,9 @@
     <title>Hello APP</title>
     <link rel="stylesheet" type="text/css" href="./css/api.css" />
     <link rel="stylesheet" type="text/css" href="./css/common.css" />
-    
+
     <style>
-     
+
      /* 头部样式 */
      #firstHeader {background-color: #FF8400;}
      .topbar {/*background: #FF8400;*/ height:50px; border-bottom: 1px solid #DDDFE3;}
@@ -18,7 +18,7 @@
      .headericohover {background: #DADDE0;}
      .fr{float: right;}
      .fl{float: left;}
-     
+
      /*第一头部*/
      #logo {padding: 11px 0 0 10px;height: 28px;}
      #citylist {height: 50px; line-height: 50px;padding-left: 15px; font-size: 18px; color: #fff;}
@@ -42,7 +42,7 @@
      /* 头部切换样式 */
      .titlebar {display: none;}
      .activebar {display: block;}
-     
+
      /* 底部切换按钮样式 */
      ul {display: -webkit-box; display: -webkit-flex; display: flex; }
      #footer {height: 61px; line-height: 60px; background-color: #FAFAFA;border-top: 1px solid #FAFAFA; }
@@ -62,7 +62,7 @@
      .bbtn03 {background: url(./image/main_index_search_normal.png) no-repeat center 4px; }
      .bbtn04 {background: url(./image/main_index_my_normal.png) no-repeat center 4px; }
      .bottom_btn {width: 99%; height: 43px;padding-top: 18px;background-position-y: 4px; background-size: 30px;  font-size: 12px; color: #A5A5A5;}
-     
+
      /* 底部按钮激活样式 */
      .activebtn0 {background: url(./image/main_index_home_pressed.png) no-repeat center 4px; }
      .activebtn1 {background: url(./image/main_index_tuan_pressed.png) no-repeat center 4px; }
@@ -89,7 +89,7 @@
           <!-- <img src="./image/topbar_search.png" alt="" class="fr headerico hr02"  tapmode="headericohover" onclick="openNewWindow('search')"> -->
         </div>
       </div>
-      
+
       <!-- 第二头部 -->
       <div id="secHeader" class="titlebar">
         <div class="topbar whitebar">
@@ -99,7 +99,7 @@
           </div>
           <!-- <img src="./image/local_icon_refresh.png" alt="" class="fr headerico" id="topbar_refresh"   tapmode="headericohover" onclick="emptyopt()">
           <img src="./image/topbar_search.png" alt="" class="fr headerico hr02"  tapmode="headericohover" onclick="openNewWindow('search')"> -->
-          
+
         </div>
       </div>
 
@@ -118,14 +118,15 @@
 
 
       <!-- 第四头部 -->
+       <!-- 测试代码 -->
       <div id="fortheader" class="titlebar">
-        
+
       </div>
-      
+
       <div id="main">
-        
+
       </div>
-      
+
       <div id="footer">
         <ul>
           <li tapmode="activebtn0 activebtn" onclick="switchframe('first_frame', 0)">
@@ -154,7 +155,7 @@
    var thirdHeader = $api.byId('thridHeader');
    var fortheader = $api.byId('fortheader');
    var firstHeaderOffset;
-   
+
    var main = $api.byId('main');
    var mainPos = $api.offset(main);
 
@@ -186,7 +187,7 @@
      var obj = api.require('scanner');
       obj.open(function(ret,err) {
           api.alert({
-              title: '扫描结果', 
+              title: '扫描结果',
               msg: ret.msg
           });
       });
@@ -313,7 +314,7 @@
 
    // 移动滑动块
    function sliderbarCallback(id, num) {
-     
+
      // 得到背景元素的宽度
      // var width=parseInt(window.getComputedStyle($api.byId('matchwidth'),null).width);
      var width = parseInt(api.frameWidth / 2);
@@ -335,7 +336,7 @@
         } else {
           gFrameIndex = _index;
         }
-        
+
         switch(type)
         {
             case 'first_frame':
@@ -380,9 +381,9 @@
         thirdHeader = $api.byId('thridHeader');
         fortheader = $api.byId('fortheader');
         $api.fixStatusBar(firstHeader);
-        $api.fixStatusBar(secHeader); 
+        $api.fixStatusBar(secHeader);
         $api.fixStatusBar(thirdHeader);
-        $api.fixStatusBar(fortheader); 
+        $api.fixStatusBar(fortheader);
 
         firstHeaderOffset = $api.offset(firstHeader);
 
