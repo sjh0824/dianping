@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 # Dianping-Source
 
 《[大众点评](http://community.apicloud.com/bbs/forum.php?mod=viewthread&tid=580&extra=page%3D1)》
@@ -9,4 +9,3 @@
 =======
 # dianping
 大众点评
->>>>>>> 9847849e6d5d76f4031d5f0d576ef23a6a5d4288
